@@ -1,0 +1,436 @@
+*{
+    box-sizing: border-box;
+}
+
+    /* background-image: url("http://www.csszengarden.com/214/contours-opaque.png"); */
+    /* background-image: url("http://www.csszengarden.com/214/gridlines.png"); */
+    /* background-image: url("http://www.csszengarden.com/214/contours@2x.png"); */
+       /* background-image: url("http://www.csszengarden.com/214/bamboo.png"); */
+       /* http://www.csszengarden.com/  */
+    /* background-image: url("http://www.csszengarden.com/214/huntington.jpg"); */
+.gridTemplate {
+      width: 100vw;
+      height: 100vh;
+      /* border: 4px solid red; */
+      display: grid;
+      background-size: cover;
+      grid-template-rows: 300px repeat(12, auto); 
+      grid-template-columns: (4, auto);
+      grid-template-areas: 
+      "header header header header2 header2 header2"
+      "article1 article1 article1 articleSide1 articleSide1 articleSide1"
+      "article2 article2 article2 articleSide2 articleSide2 articleSide2"
+      "article3 article3 article3 articleSide3 articleSide3 articleSide3"
+      "penultimateFooter penultimateFooter penultimateFooter penultimateFooter penultimateFooter penultimateFooter"
+      "footer footer footer footer footer footer";
+}
+@font-face{
+    src: url("https://fonts.gstatic.com/s/juliussansone/v7/1Pt2g8TAX_SGgBGUi0tGOYEga5WOwnsXy6KHHg.woff2");
+    font-family: titleZen;
+}
+@font-face{
+    src: url("https://fonts.gstatic.com/s/librebaskerville/v6/kmKhZrc3Hgbbcjq75U4uslyuy4kn0qNcWxEQDO-Wyrs.woff2");
+    font-family: littleZen;
+}
+@font-face{
+    src: url("https://fonts.gstatic.com/s/librebaskerville/v6/kmKnZrc3Hgbbcjq75U4uslyuy4kn0qNZaxMaC82U.woff2");
+    font-family: bodyText;
+}
+@font-face{
+    src: url("verdemoderna.woff");
+    font-family: footerFont;
+}
+/* .box{
+      border: 2px solid red;
+} */
+.a{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+h1.title{
+    line-height: 45px;
+    position: relative;
+    right: 45px;
+}
+span.white{
+    font-family: titleZen;
+    color: white;
+    font-size: 55px;
+    font-weight: lighter;
+}
+span.dotted{
+    border-bottom: 2px dotted rgb(178, 201, 198);
+}
+.blue{
+    font-family: littleZen;
+    color: rgb(178, 201, 198);
+    font-size: 25px;
+}
+.logoImg{
+    height: 130px;
+    width: 12%;
+    display: inline-block;
+    margin-top: 75px;
+    margin-right: 30px;
+    position: relative;
+    right: 50px;
+}
+.title{
+    margin-top: 95px;
+}
+.b{
+    grid-area: header2;
+}
+.a, .b{
+    background-image: url("http://www.csszengarden.com/214/huntington.jpg");
+}
+.whiteView{
+    font-family: titleZen;
+    font-weight: lighter;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    position: relative;
+    top: 100px;
+    left: 30px;
+    display: inline;
+    padding: 15px 40px 15px 10px;
+    background-color: rgb(109, 155, 156);
+    opacity: 0.65;
+    z-index: 2;
+}
+span.greaterThan{
+    color: white;
+    text-align: center;
+    font-family: footerFont;
+    font-size: 45px;
+    position: relative;
+    top: 111px;
+    left: 30px;
+    display: inline-block;
+    background-color: rgb(109, 155, 156);
+    padding: 4px 15px 4px 15px;
+}
+.whiteView:hover{
+    background-color: lightgray;
+    opacity: 0.8;
+    cursor:  ;
+}
+.greaterThan:hover{
+    background-color: lightgray;
+    opacity: 0.8;
+}
+img.contours{
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    mix-blend-mode: screen;
+}
+.c{
+    grid-area: article1;
+    font-family: bodyText;
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(50, 63, 59);
+}
+p.divC{
+    line-height: 30px;
+    margin: 35px auto auto 80px;
+    font-size: 15px;
+}
+p.download{
+    margin: 20px 80px;
+}
+.space{
+    height: 5px;
+    width: 100%;
+}
+span.bigBlue{
+    color:rgb(101, 139, 128);
+    font-weight: lighter;
+    font-family: titleZen;
+}
+.secondaryTitle{
+    font-weight: lighter;
+    font-family: titleZen;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin: 20px 80px;
+}
+.textC1{
+    margin: 15px 35px 10px 80px;
+    line-height: 30px;
+}
+.textC2{
+    margin: auto 35px 10px 80px;
+    line-height: 30px;
+}
+.d{
+    grid-area: articleSide1;
+    background-color: rgb(226, 235, 217);
+}
+ul{
+    list-style: none;
+    line-height: 25px;
+    margin-top: 50px;
+    padding: 60px;
+}
+li{
+    margin-top: 50px;
+    font-family: bodyText;
+    font-size: 14px;
+    color:rgb(50, 63, 59);
+}
+.listTitle{
+    font-family: titleZen;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: rgb(82, 109, 102);
+}
+ul.resources{
+    margin: 100px 75px;
+    position: relative;
+    right: 60px;
+}
+.resourceTitle{
+    border-top: 1px solid rgb(141, 163, 156);
+    padding-top: 30px;
+    font-family: titleZen;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: rgb(82, 109, 102);
+    margin: 20px;
+}
+.bottomSource{
+    border-bottom: 1px solid rgb(141, 163, 156);
+    padding-bottom: 20px;
+}
+.by{
+    font-size: 17px;
+}
+.e{
+    grid-area: article2;
+    font-family: bodyText;
+    display: flex;
+    flex-flow: row wrap;
+    color: rgb(50, 63, 59);
+}
+.e{
+    background-image: url("http://www.csszengarden.com/214/bamboo.png");
+    background-color: rgb(205, 233, 220);
+    mix-blend-mode: difference;
+}
+.f{
+    grid-area: articleSide2;
+    background-image: url("http://www.csszengarden.com/214/bamboo.png");
+    background-color:rgb(205, 233, 211);
+    mix-blend-mode: difference;
+}
+.g{
+    grid-area: article3;
+    font-family: bodyText;
+    color: rgbrgb(50, 63, 59);
+}
+.h{
+    grid-area: articleSide3;
+    background-color: rgb(226, 235, 217);
+}
+.i{
+    grid-area: penultimateFooter;
+    background-image: url("http://www.csszengarden.com/214/koi.jpg");
+}
+.bottomBlue{
+    color:rgb(154, 172, 172);
+    font-weight: lighter;
+    font-family: littleZen;
+    text-align: center;
+    margin: 120px;
+}
+.whiteBottom{
+    color: white;
+    font-family: bodyText;
+    opacity: 0.65;
+}
+.j{
+    grid-area: footer;
+    background-color: rgb(45, 72, 73);
+    font-family: footerFont;
+    text-align: center;
+    color: rgb(120, 152, 153);
+    position: relative;
+    z-index: 2;
+    font-size: 35px;
+}
+.footer{
+    display: inline-block;
+    margin: 80px 50px;
+    
+}
+.footer:hover{
+    color: lightgray;
+    cursor: pointer;
+}
+@media screen and (max-width: 1090px){
+    span.white{
+        font-size: 30px;
+    }
+    span.dotted, .blue{
+        font-size: 15px;
+    }
+    .logoImg{
+        height: 90px;
+        width: 10%;
+        display: inline-block;
+        margin-top: 75px;
+        margin-right: 30px;
+        position: relative;
+        right: 30px;
+    }
+    h1.title{
+        line-height: 25px;
+        position: relative;
+        right: 45px;
+    }
+}
+@media screen and (max-width: 959px){
+    .gridTemplate{
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+      grid-template-areas: 
+      "header header header header header header"
+      "header2 header2 header2 header2 header2 header2"
+      "article1 article1 article1 article1 article1 article1"
+      "article2 article2 article2 article2 article2 article2"
+      "article3 article3 article3 article3 article3 article3"
+      "articleSide3 articleSide3 articleSide3 articleSide3 articleSide3 articleSide3"
+      "penultimateFooter penultimateFooter penultimateFooter penultimateFooter penultimateFooter penultimateFooter"
+      "footer footer footer footer footer footer"
+      "articleSide1 articleSide1 articleSide1 articleSide1 articleSide1 articleSide1"
+      "articleSide2 articleSide2 articleSide2 articleSide2 articleSide2 articleSide2";
+    }
+    .secondaryTitle{
+        text-align: center;
+        margin: auto;
+        font-size: 20px;
+    }
+    span.white{
+        font-size: 30px;
+    }
+    span.dotted, .blue{
+        font-size: 15px;
+    }
+    .logoImg{
+        height: 90px;
+        width: 10%;
+        display: inline-block;
+        margin-top: 75px;
+        margin-right: 30px;
+        position: relative;
+        right: 30px;
+    }
+    h1.title{
+        line-height: 25px;
+        position: relative;
+        right: 45px;
+    }
+    ul{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        padding: 0;
+        text-align: center;
+    }
+    li{
+        display: inline-block;
+        margin-right: 30px;
+
+    }
+    .textC1{
+        margin: 15px auto 10px 10px;
+        line-height: 30px;
+    }
+    .textC2{
+        margin: auto 10px 10px 10px;
+        line-height: 30px;
+    }
+    .listTitle{
+        font-size: 15px;
+    }
+    ul.resources{
+        display: inline;
+        border-top: 1px solid rgb(141, 163, 156);
+        border-bottom: 1px solid rgb(141, 163, 156);
+        padding: 5px;
+        margin: auto;
+        position: static;
+    }
+    li.resourceTitle{
+        border: none;
+        margin-top: 5px;
+        font-size: 15px;
+    }
+    .contour{
+        width: 100%;
+        height: 10vh;
+    }
+    .footer{
+        font-size: 20px;
+        margin: 30px;
+    }
+    .whiteView{
+        position: static;
+        margin-bottom: 5px;
+        width: 100%;
+        font-size: 20px;
+    }
+    .bottomBlue, .whiteBottom{
+        font-size: 20px;
+        margin: 45px auto;
+    }
+    .textC1, .textC2{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 640px){
+    .j, .f{
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .resourceTitle{
+        display: block;
+    }
+    .footer{
+        margin: 10px;
+    }
+    .resourceTitle{
+        display: block;
+    }
+    .bottomBlue, .whiteBottom{
+        font-size: 15px;
+        margin: 5px auto;
+    }
+    p.divC{
+        margin: auto;
+    }
+    .logoImg{
+        height: 70px;
+        width: 15%;
+        display: inline-block;
+        margin-top: 75px;
+        margin-right: 5px;
+        position: relative;
+        right: 10px;
+    }
+    h1.title{
+        line-height: 25px;
+        position: relative;
+        right: 15px;
+    }
+    .footer{
+        font-size: 25px;
+    }
+}
